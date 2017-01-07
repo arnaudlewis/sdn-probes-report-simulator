@@ -1,0 +1,22 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/arnaudlewis/.nvm/versions/node/v4.6.2/bin/node',
+1 verbose cli   '/Users/arnaudlewis/.nvm/versions/node/v4.6.2/bin/npm',
+1 verbose cli   'completion',
+1 verbose cli   '--' ]
+2 info using npm@2.15.11
+3 info using node@v4.6.2
+4 verbose stack TypeError: Cannot read property 'length' of undefined
+4 verbose stack     at EventEmitter.completion (/Users/arnaudlewis/.nvm/versions/node/v4.6.2/lib/node_modules/npm/lib/completion.js:86:22)
+4 verbose stack     at Object.commandCache.(anonymous function) (/Users/arnaudlewis/.nvm/versions/node/v4.6.2/lib/node_modules/npm/lib/npm.js:220:11)
+4 verbose stack     at EventEmitter.<anonymous> (/Users/arnaudlewis/.nvm/versions/node/v4.6.2/lib/node_modules/npm/bin/npm-cli.js:73:28)
+4 verbose stack     at nextTickCallbackWith0Args (node.js:436:9)
+4 verbose stack     at process._tickCallback (node.js:365:13)
+5 verbose cwd /development/workspace/sdn-probes-report-simulator
+6 error Darwin 16.3.0
+7 error argv "/Users/arnaudlewis/.nvm/versions/node/v4.6.2/bin/node" "/Users/arnaudlewis/.nvm/versions/node/v4.6.2/bin/npm" "completion" "--"
+8 error node v4.6.2
+9 error npm  v2.15.11
+10 error Cannot read property 'length' of undefined
+11 error If you need help, you may report this error at:
+11 error     <https://github.com/npm/npm/issues>
+12 verbose exit [ 1, true ]

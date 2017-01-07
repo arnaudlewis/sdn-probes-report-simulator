@@ -1,0 +1,15 @@
+{
+  "name": "sdn-probes-report-simulator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "arnaudlewis",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.79.0"
+  }
+}
