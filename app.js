@@ -4,14 +4,23 @@ const request = require('request');
 const SEED_DELAY = process.argv[2] || 200; //ms
 const data = require('./data/origins.json');
 
-const SERVER_URL = 'http://algolia.dev/api/report';
+const SERVER_URL = 'http://algolia.dev/report';
 
 function reportToServer(ping) {
   return new Promise(resolve => {
-    request.post(SERVER_URL, {form: ping})
-    request(SERVER_URL, function(error, response, body) {
-      if(error) reject();
+    const options = {
+      url: SERVER_URL,
+      method: "POST",
+      json: true,
+      headers: {
+          "content-type": "application/json",
+      },
+      body: ping,
+    };
+    request(options, function(error, response, body) {
       console.log(ping.origin);
+      if(error) reject(error);
+      if(response.statusCode >= 400 && response.statusCode < 500) console.error(response.body)
       setTimeout(resolve, SEED_DELAY);
     });
   });
